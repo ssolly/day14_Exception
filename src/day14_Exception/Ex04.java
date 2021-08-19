@@ -3,11 +3,12 @@ package day14_Exception;
 import java.io.IOException;
 
 class A {
+	//③
 	public void test() throws IOException {
 		ProcessBuilder b = new ProcessBuilder("calcc");
 		b.start();
 	}
-	
+	//③
 	public void display() throws IOException {
 		test();	//예외 전가 필요하다
 	}
@@ -28,10 +29,10 @@ class A {
 
 public class Ex04 {
 
-	public static void main(String[] args) /* ② throws IOException */ {
+	public static void main(String[] args) /* ②,③ throws IOException */ {
 		
 		A a = new A();
-		a.display();
+		//③ a.display();
 		a.displaydisplay();
 		System.out.println("다음 문장들 실행");
 		
